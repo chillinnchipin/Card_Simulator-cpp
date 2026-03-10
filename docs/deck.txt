@@ -1,0 +1,35 @@
+Deck
+    A class representing a deck of cards.
+
+Attributes
+# deck_size: int - the size of the deck, the number of cards in the deck
+# deck: Card[deck_size..deck_size] - a list of cards in the deck
+
+Methods
++ get_deck(): Card[deck_size..deck_size] - returns the deck of cards as a list of cards
++ get_deck_size(): int - returns the number of cards in the deck
++ get_card(index: int): Card - returns the specific card at the given index
++ get_card(card: Card): Card - returns the first card matching the given card
++ get_card(face: string, value: int): Card - returns the first card
++ get_cards(match: Card): Card[0..deck_size] - returns all cards with that match the given card
++ get_cards(face: string, value: int): Card[0..deck_size] - returns all card that have both the given face and value
+
++ set_deck(deck: deck) - changes the stored deck to the given deck
++ set_deck(deck: Card[0..*]) - changes the stored deck to the given list of cards
++ set_deck_size(deck_size: int) - changes the deck_size to the given deck size
+
++ add_card(card: Card, index: int) - adds the card to the deck at the given card to the given index
++ add_card(face: string, value: int, index: int) - creates a card and adds it to the deck at the given index
++ push_card(card: Card) - adds the given card to the end of the deck
++ push_card(face: string, value: int) - creates a new card and adds it to the end of the deck
++ append_card(card: Card) - adds the given card to the begining of the list
++ append_card(face: string, value: int) - creates a new card and adds it to the begining of the deck
+
++ remove_card(index: int): Card - removes the card at the given index and returns a copy of the card
++ pop_card(): Card - removes the card at the end of deck and returns a coyp of the card
++ pop_head(): Card - removes the card at the begining of the deck and returns a coyp of the card
++ peak_card(): Card - returns a copy of the card at the end of the deck
++ peak_head(): Card - returns a copy of the card at the begining of the deck
+
++ sort(): Deck - sorts the deck using the prefered sorting algorithm in order of faces then values and returns a copy of the sorted deck
++ shuffle(): Deck - shuffles the deck using the prefered shuffle method and returns a copy of the shuffled deck
