@@ -17,3 +17,16 @@ Operators
 + operator== (other: Card): bool - returns true if both cards have the same suit and value, returns false otherwise
 + operator< (other: Card): bool - returns true if value if less than ther value of the other card, returns false otherwise
 + operator> (other: Card): bool - returns true if value is greater than the other card's value, returns false otherwise
+
+PlayingCard: Card
+    A class representing a standard playing card. Performs this by hard coding values from the card class
+
+Attributes
+- suit: "Diamond" | "Clubs" | "Hearts" | "Spades"
+- value: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | "Jack" | "Queen" | "King" | "Ace"
+
+Methods
++ get_suit(): "Diamond" | "Clubs" | "Hearts" | "Spades" - returns the suit of the card
++ get_value(): 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | "Jack" | "Queen" | "King" | "Ace" - returns the value of the card
++ set_suit(suit: "Diamond" | "Clubs" | "Hearts" | "Spades") - sets the suit of the card to the given suit
++ set_value(value: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | "Jack" | "Queen" | "King" | "Ace") - sets the value of the card to the given value
