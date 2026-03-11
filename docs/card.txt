@@ -1,19 +1,19 @@
 Card
-    A class representing a single playing card. Stores the face and value in the card
+    A class representing a single playing card. Stores the suit and value in the card
 
 Attributes
-# face: string - the face of the card, 
+# suit: string - the suit of the card, 
 # value: int - the numerical value held by the card
 
 Methods
-+ get_face(): string - returns the face of the card
++ get_suit(): string - returns the suit of the card
 + get_value(): int - returns the value of the card
-+ set_face(face: string) - sets the face of the card to the given face
++ set_suit(suit: string) - sets the suit of the card to the given suit
 + set_value(value: int) - sets the value of the card to the given value
 
 Operators
 + operator= (other: Card): Card - set the card to the given card
-+ operator+ (other: Card): Card - adds the value of the other card if they have the same face
-+ operator== (other: Card): bool - returns true if both cards have the same face and value, returns false otherwise
++ operator+ (other: Card): Card - adds the value of the other card if they have the same suit
++ operator== (other: Card): bool - returns true if both cards have the same suit and value, returns false otherwise
 + operator< (other: Card): bool - returns true if value if less than ther value of the other card, returns false otherwise
 + operator> (other: Card): bool - returns true if value is greater than the other card's value, returns false otherwise
