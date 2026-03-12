@@ -116,5 +116,69 @@ namespace cardsim
              */
             bool operator>(Card other);
         };
+
+        class PlayingCard : Card
+        {
+        public:
+            enum class Suit
+            {
+                CLubs,
+                Diamonds,
+                Hearts,
+                Spades,
+            };
+            
+            enum class Value {
+                One,
+                Two,
+                Three,
+                Four,
+                Five,
+                Six,
+                Seven,
+                Eight,
+                Nine,
+                Ten,
+                Jack,
+                Queen,
+                King,
+                Ace,
+            };
+
+        private:
+            /// @brief 
+            Suit suit;
+            /// @brief 
+            Value value;
+
+        public:
+            /**
+             * @brief returns the suit of the card
+             * 
+             * @return the suit of the card
+             */
+            Suit get_suit();
+
+            /**
+             * @brief returns the value of the card
+             * 
+             * @return the value of the card
+             */
+            Value get_value();
+
+            /**
+             * @brief sets the suit of the card to the given suit
+             * 
+             * @param suit the new suit to set the card to
+             */
+            void set_suit(Suit suit);
+
+            /**
+             * @brief sets the value of the card to the given value
+             * 
+             * @param value the new value to set the card to
+             */
+            void set_value(Value value);
+        };
     }
 }
