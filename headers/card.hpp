@@ -18,8 +18,17 @@ namespace cardsim
             public:
             // Constructors
 
+            /**
+             * @brief a default contructor that initalizes an empty suit and value
+             */
             Card();
 
+            /**
+             * @brief a constructor that initalizes both the suit and value of the card
+             * 
+             * @param suit the suit of the card
+             * @param value the value of the card
+             */
             Card(string suit, int value) : suit(suit), value(value) {}
 
             // Methods
@@ -122,6 +131,7 @@ namespace cardsim
         class PlayingCard : Card
         {
         public:
+            /// @brief a class limiting the Suit attribute to: Clubs, Diamonds, Hearts, Spades
             enum class Suit
             {
                 CLubs,
@@ -130,6 +140,7 @@ namespace cardsim
                 Spades,
             };
             
+            /// @brief a classs limiting the Value attribute to: "Jack", "Queen", "King", "Ace", and 1-10
             enum class Value {
                 One,
                 Two,
@@ -148,12 +159,20 @@ namespace cardsim
             };
 
         private:
-            /// @brief 
+            /// @brief the suit of the card, limited to: Clubs, Diamonds, Hearts, Spades
             Suit suit;
-            /// @brief 
+            /// @brief the value of the card, limited to: "Jack", "Queen", "King", "Ace", and 1-10
             Value value;
 
         public:
+
+            /**
+             * @brief a constructor that initalize the suit and value of the card
+             * 
+             * @param suit the suit to set the card to, options are limited to: "Diamonds", "Clubs", "Hearts", "Spades"
+             * @param value the value to set the card to, options are limited to: "Jack", "Queen", "King", "Ace", and 1-10
+             */
+            PlayingCard(Suit suit, Value value);
             /**
              * @brief returns the suit of the card
              * 
