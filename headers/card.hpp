@@ -200,6 +200,14 @@ namespace cardsim
              * @param value the new value to set the card to
              */
             void set_value(Value value);
+
+            Suit int_to_suit(int suit);
+
+            Suit string_to_suit(string suit);
+
+            Value int_to_value(int value);
+
+            Value string_to_value(string value);
         };
     }
 }
