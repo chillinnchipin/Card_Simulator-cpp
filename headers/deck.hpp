@@ -171,7 +171,7 @@ namespace cardsim
              *
              * @param card the card to add to the end of the deck
              */
-            void push_card(Card card);
+            void append_card(Card card);
 
             /**
              * @brief creates a new card and adds it to the end of the deck
@@ -179,14 +179,14 @@ namespace cardsim
              * @param suit the suit of the card to add to the end of the deck
              * @param value the value of the card to add to the end of deck
              */
-            void push_card(string suit, int value);
+            void append_card(string suit, int value);
 
             /**
              * @brief adds the given card to the begining of the list
              *
              * @param card the card to add to the begining of the deck
              */
-            void append_card(Card card);
+            void prepend_card(Card card);
 
             /**
              * @brief creates a new card and adds it to the begining of the deck
@@ -194,7 +194,7 @@ namespace cardsim
              * @param suit the suit of the card to add to the begining of the deck
              * @param value the value of the card to add to the begining of the deck
              */
-            void append_card(string suit, int value);
+            void prepend_card(string suit, int value);
 
             /**
              * @brief removes the card at the given index and returns a copy of the card
