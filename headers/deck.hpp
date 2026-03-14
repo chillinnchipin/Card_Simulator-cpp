@@ -2,6 +2,7 @@
 #include <vector>
 #include <array>
 #include <optional>
+#include <iterator>
 
 #include "card.hpp"
 
@@ -46,6 +47,34 @@ namespace cardsim
             Deck(std::vector<Card> deck);
 
             // Methods
+
+            /**
+             * @brief returns the size of the deck, i.e. number of cards in the deck
+             * 
+             * @return the number of cards in the deck
+             */
+            size_t size();
+
+            /**
+             * @brief used to tell if the deck is empty or not
+             * 
+             * @return true if there are not card in the deck, false if there is at least one card in the deck
+             */
+            bool empty();
+
+            /**
+             * @brief 
+             * 
+             * @return an iterator for the first card in the deck
+             */
+            std::vector<Card>::iterator begin();
+
+            /**
+             * @brief 
+             * 
+             * @return an iterator for the last card in the deck
+             */
+            std::vector<Card>::iterator end();
 
             /**
              * @brief returns the deck of cards as a list of cards
@@ -231,6 +260,11 @@ namespace cardsim
              * @return a copy of the card at the begining of the deck
              */
             Card peak_head();
+
+            /**
+             * @brief clears all cards in the deck
+             */
+            void clear();
 
             /**
              * @brief sorts the deck using the prefered sorting algorithm in order of suits then values and returns a copy of the sorted deck

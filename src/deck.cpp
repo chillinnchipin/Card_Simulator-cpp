@@ -21,6 +21,14 @@ namespace cardsim {
             return deck_size;
         }
 
+        size_t Deck::size() { return deck.size(); }
+
+        bool Deck::empty() { return deck.empty(); }
+
+        std::vector<Card>::iterator Deck::begin() { return deck.begin(); } //FIXME: the iterator from .begin() and the return function as not the same
+
+        std::vector<Card>::iterator Deck::end() { return deck.end(); } //FIXME: the iterator from .end() and the return function as not the same
+
         std::vector<Card> Deck::get_deck() { return deck; }
 
         Card Deck::get_card(size_t index) {
@@ -125,5 +133,7 @@ namespace cardsim {
         Card Deck::peak_card() { return deck.back(); }
 
         Card Deck::peak_head() { return deck.front(); }
+
+        void Deck::clear() { deck.clear(); }
     }
 }
