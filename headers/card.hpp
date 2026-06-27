@@ -19,12 +19,12 @@ namespace cardsim
             // Constructors
 
             /**
-             * @brief a default contructor that initalizes an empty suit and value
+             * @brief a default constructor that initializes an empty suit and value
              */
             Card();
 
             /**
-             * @brief a constructor that initalizes both the suit and value of the card
+             * @brief a constructor that initializes both the suit and value of the card
              * 
              * @param suit the suit of the card
              * @param value the value of the card
@@ -123,7 +123,7 @@ namespace cardsim
              * @brief returns true if value is greater than the other card's value, returns false otherwise
              *
              * @param other the other card to compare to suit and value to
-             * @return true if the value is greather than ther other card's value, false otherwise
+             * @return true if the value is greater than ther other card's value, false otherwise
              */
             bool operator>(Card other);
         };
@@ -167,7 +167,7 @@ namespace cardsim
         public:
 
             /**
-             * @brief a constructor that initalize the suit and value of the card
+             * @brief a constructor that initialize the suit and value of the card
              * 
              * @param suit the suit to set the card to, options are limited to: "Diamonds", "Clubs", "Hearts", "Spades"
              * @param value the value to set the card to, options are limited to: "Jack", "Queen", "King", "Ace", and 1-10

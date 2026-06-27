@@ -25,7 +25,7 @@ namespace cardsim
             // Constructors
 
             /**
-             * @brief a default constructor that initalizes the deck with no cards and a size of 0
+             * @brief a default constructor that initializes the deck with no cards and a size of 0
              */
             Deck();
 
@@ -132,7 +132,7 @@ namespace cardsim
              * @brief returns a vector with all cards with that match the given card
              *
              * @param match any card in the deck that is equal to this card will be added to the vector
-             * @return a vector containig all of the cards that match the given card
+             * @return a vector containing all of the cards that match the given card
              */
             std::vector<Card> get_cards(Card match);
 
@@ -150,7 +150,7 @@ namespace cardsim
             /**
              * @brief returns all card that have both the given suit and value
              *
-             * @param size an optional pointer to a size variable to will be changed to the number of cards in the vectory
+             * @param size an optional pointer to a size variable to will be changed to the number of cards in the vector
              * @param suit any card that is added to the vector will need to have the same suit
              * @return a vector containing all the cards with the same suit and value 
              */
@@ -234,14 +234,14 @@ namespace cardsim
             Card remove_card(size_t index);
 
             /**
-             * @brief removes the card at the end of deck and returns a coyp of the card
+             * @brief removes the card at the end of deck and returns a copy of the card
              *
              * @return a copy of the card that was removed
              */
             Card pop_card();
 
             /**
-             * @brief removes the card at the begining of the deck and returns a coyp of the card
+             * @brief removes the card at the begining of the deck and returns a copy of the card
              *
              * @return a copy of the card that was removed
              */
@@ -267,14 +267,14 @@ namespace cardsim
             void clear();
 
             /**
-             * @brief sorts the deck using the prefered sorting algorithm in order of suits then values and returns a copy of the sorted deck
+             * @brief sorts the deck using the preferred sorting algorithm in order of suits then values and returns a copy of the sorted deck
              *
              * @return a copy of the sorted deck
              */
             Deck sort();
 
             /**
-             * @brief shuffles the deck using the prefered shuffle method and returns a copy of the shuffled deck
+             * @brief shuffles the deck using the preferred shuffle method and returns a copy of the shuffled deck
              *
              * @return a copy of the shuffled deck
              */

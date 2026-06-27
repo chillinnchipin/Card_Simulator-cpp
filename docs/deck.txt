@@ -22,14 +22,14 @@ Methods
 + add_card(suit: string, value: int, index: int) - creates a card and adds it to the deck at the given index
 + push_card(card: Card) - adds the given card to the end of the deck
 + push_card(suit: string, value: int) - creates a new card and adds it to the end of the deck
-+ append_card(card: Card) - adds the given card to the begining of the list
-+ append_card(suit: string, value: int) - creates a new card and adds it to the begining of the deck
++ append_card(card: Card) - adds the given card to the beginning of the list
++ append_card(suit: string, value: int) - creates a new card and adds it to the beginning of the deck
 
 + remove_card(index: int): Card - removes the card at the given index and returns a copy of the card
-+ pop_card(): Card - removes the card at the end of deck and returns a coyp of the card
-+ pop_head(): Card - removes the card at the begining of the deck and returns a coyp of the card
++ pop_card(): Card - removes the card at the end of deck and returns a copy of the card
++ pop_head(): Card - removes the card at the beginning of the deck and returns a copy of the card
 + peak_card(): Card - returns a copy of the card at the end of the deck
-+ peak_head(): Card - returns a copy of the card at the begining of the deck
++ peak_head(): Card - returns a copy of the card at the beginning of the deck
 
-+ sort(): Deck - sorts the deck using the prefered sorting algorithm in order of suits then values and returns a copy of the sorted deck
-+ shuffle(): Deck - shuffles the deck using the prefered shuffle method and returns a copy of the shuffled deck
++ sort(): Deck - sorts the deck using the preferred sorting algorithm in order of suits then values and returns a copy of the sorted deck
++ shuffle(): Deck - shuffles the deck using the preferred shuffle method and returns a copy of the shuffled deck

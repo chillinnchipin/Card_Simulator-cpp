@@ -18,7 +18,7 @@ Operators
 + operator+ (other: Card): Card - adds the value of the other card if they have the same suit
 + operator+ (other: int): Card - adds the given value to the card's value
 + operator== (other: Card): bool - returns true if both cards have the same suit and value, returns false otherwise
-+ operator< (other: Card): bool - returns true if value if less than ther value of the other card, returns false otherwise
++ operator< (other: Card): bool - returns true if value if less than their value of the other card, returns false otherwise
 + operator> (other: Card): bool - returns true if value is greater than the other card's value, returns false otherwise
 
 PlayingCard: Card

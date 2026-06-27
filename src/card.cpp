@@ -83,7 +83,7 @@ namespace cardsim
                 this->value = value;
                 break;
             default:
-                throw std::runtime_error("Invalid paraneter Value");
+                throw std::runtime_error("Invalid parameter Value");
             }
         }
 

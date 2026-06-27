@@ -1,8 +1,8 @@
-#Inital setup
+# Initial setup
 FROM ubuntu:latest
 WORKDIR /dev/cardsim/
 
-# Install dependances
+# Install dependency
 RUN apt update
 RUN apt upgrade -y
 #RUN apt install gcc -y
