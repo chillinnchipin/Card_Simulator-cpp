@@ -73,6 +73,8 @@ int main(int argc, char *argv[])
     testCases.push_back(CU_add_test(testSuites.at(0), "Test Card operator==", test_Card_operator_eq));
     testCases.push_back(CU_add_test(testSuites.at(0), "Test Card operator<", test_Card_operator_lt));
     testCases.push_back(CU_add_test(testSuites.at(0), "Test Card operator>", test_Card_operator_gt));
+    testCases.push_back(CU_add_test(testSuites.at(0), "Test Card operator=", test_Card_operator_assign));
+    testCases.push_back(CU_add_test(testSuites.at(0), "Test Card operator+", test_Card_operator_add));
     testCases.push_back(CU_add_test(testSuites.at(1), "Test Playing Card Default Constructor", test_PlayingCard_default_constructor));
     testCases.push_back(CU_add_test(testSuites.at(1), "Test Playing Card Constructor", test_PlayingCard_constructor));
     testCases.push_back(CU_add_test(testSuites.at(1), "Test Playing Card get_suit", test_PlayingCard_get_suit));

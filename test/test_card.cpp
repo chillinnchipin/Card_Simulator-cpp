@@ -204,9 +204,47 @@ void test_Card_operator_gt()
     CU_ASSERT_FALSE(greater_than_card > test_card);
 }
 
-void test_Card_operator_assign() {}
+void test_Card_operator_assign() {
+    // Create original card
+    std::string original_suit = "Hearts";
+    int original_value = 5;
+    cardsim::objects::Card original_card = cardsim::objects::Card(original_suit, original_value);
 
-void test_Card_operator_add() {}
+    // Create new card with different suit and value
+    std::string new_suit = "Diamonds";
+    int new_value = 10;
+    cardsim::objects::Card new_card = cardsim::objects::Card(new_suit, new_value);
+
+    // Assign new card to original card
+    original_card = new_card;
+    CU_ASSERT_EQUAL(original_card.get_suit(), new_suit);
+    CU_ASSERT_EQUAL(original_card.get_value(), new_value);
+    CU_ASSERT_NOT_EQUAL(original_card.get_suit(), original_suit);
+    CU_ASSERT_NOT_EQUAL(original_card.get_value(), original_value);
+}
+
+void test_Card_operator_add() {
+    // Create original card
+    std::string original_suit = "Hearts";
+    int original_value = 5;
+    cardsim::objects::Card original_card = cardsim::objects::Card(original_suit, original_value);
+
+    // Create another card with the same suit and a different value
+    std::string other_suit = "Hearts";
+    int other_value = 10;
+    cardsim::objects::Card other_card = cardsim::objects::Card(other_suit, other_value);
+
+    // Add the other card to the original card
+    original_card + other_card;
+
+    // Assert that the value of the original card has been updated correctly
+    CU_ASSERT_EQUAL(original_card.get_value(), original_value + other_value);
+
+    // Add an additional value to the original card
+    int additional_value = 3;
+    original_card + additional_value;
+    CU_ASSERT_EQUAL(original_card.get_value(), original_value + other_value + additional_value);
+}
 
 int setup_PlayingCard_test_suite()
 {
