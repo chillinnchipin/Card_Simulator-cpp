@@ -4,7 +4,7 @@ CFLAGS :=
 CXXFLAGS :=
 CPPFLAGS := -c
 
-all: cardsim
+all: cardsim test
 
 cardsim: deck.o card.o cardsim.o
 	$(CXX) $(CXXFLAGS) cardsim.o deck.o card.o -o cardsim
@@ -18,7 +18,9 @@ deck.o: headers/deck.hpp src/deck.cpp card.o
 card.o: headers/card.hpp src/card.cpp
 	$(CXX) $(CPPFLAGS) src/card.cpp -o card.o
 
-test: 
+test: test/tests.cpp deck.o card.o
+	$(CXX) $(CPPFLAGS) test/tests.cpp -o tests.o
+	$(CXX) $(CXXFLAGS) tests.o deck.o card.o -o tests -lcunit
 
 clean: 
 	rm *.o
