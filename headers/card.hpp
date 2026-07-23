@@ -201,13 +201,21 @@ namespace cardsim
              */
             void set_value(Value value);
 
-            Suit int_to_suit(int suit);
+            static Suit int_to_suit(int suit);
 
-            Suit string_to_suit(string suit);
+            static Suit string_to_suit(string suit);
 
-            Value int_to_value(int value);
+            static Value int_to_value(int value);
 
-            Value string_to_value(string value);
+            static Value string_to_value(string value);
+
+            static int suit_to_int(Suit suit); 
+
+            static string suit_to_string(Suit suit);
+
+            static int value_to_int(Value value);
+
+            static string value_to_string(Value value);
         };
     }
 }

@@ -209,5 +209,147 @@ namespace cardsim
             else
                 throw std::runtime_error("Invalid value type");
         }
+
+        int PlayingCard::suit_to_int(PlayingCard::Suit suit)
+        {
+            switch (suit)
+            {
+            case Suit::CLubs:
+                return 0;
+                break;
+            case Suit::Diamonds:
+                return 1;
+                break;
+            case Suit::Hearts:
+                return 2;
+                break;
+            case Suit::Spades:
+                return 3;
+                break;
+            default:
+                throw std::runtime_error("Invalid Suit type");
+            }
+        }
+
+        string PlayingCard::suit_to_string(PlayingCard::Suit suit)
+        {
+            switch (suit)
+            {
+            case Suit::CLubs:
+                return "Clubs";
+                break;
+            case Suit::Diamonds:
+                return "Diamonds";
+                break;
+            case Suit::Hearts:
+                return "Hearts";
+                break;
+            case Suit::Spades:
+                return "Spades";
+                break;
+            default:
+                throw std::runtime_error("Invalid Suit type");
+            }
+        }
+
+        int PlayingCard::value_to_int(PlayingCard::Value value)
+        {
+            switch (value)
+            {
+            case Value::Ace:
+                return 0;
+                break;
+            case Value::One:
+                return 1;
+                break;
+            case Value::Two:
+                return 2;
+                break;
+            case Value::Three:
+                return 3;
+                break;
+            case Value::Four:
+                return 4;
+                break;
+            case Value::Five:
+                return 5;
+                break;
+            case Value::Six:
+                return 6;
+                break;
+            case Value::Seven:
+                return 7;
+                break;
+            case Value::Eight:
+                return 8;
+                break;
+            case Value::Nine:
+                return 9;
+                break;
+            case Value::Ten:
+                return 10;
+                break;
+            case Value::Queen:
+                return 11;
+                break;
+            case Value::King:
+                return 12;
+                break;
+            }
+        }
+
+        string PlayingCard::value_to_string(PlayingCard::Value value)
+        {
+            switch (value)
+            {
+            case Value::Ace:
+                return "Ace";
+                break;
+            case Value::One:
+                return "One";
+                break;
+            case Value::Two:
+                return "Two";
+                break;
+            case Value::Three:
+                return "Three";
+                break;
+            case Value::Four:
+                return "Four";
+                break;
+            case Value::Five:
+                return "Five";
+                break;
+            case Value::Six:
+                return "Six";
+                break;
+            case Value::Seven:
+                return "Seven";
+                break;
+            case Value::Eight:
+                return "Eight";
+                break;
+            case Value::Nine:
+                return "Nine";
+                break;
+            case Value::Ten:
+                return "Ten";
+                break;
+            case Value::Queen:
+                return "Queen";
+                break;
+            case Value::King:
+                return "King";
+                break;
+            }
+        }
+
+        bool operator==(PlayingCard::Suit lhs, PlayingCard::Suit rhs) {
+            return PlayingCard::suit_to_int(lhs) == PlayingCard::suit_to_int(rhs);
+        }
+
+        bool operator==(PlayingCard::Value lhs, PlayingCard::Value rhs) {
+            return PlayingCard::value_to_int(lhs) == PlayingCard::value_to_int(rhs);
+        }
     }
 }
