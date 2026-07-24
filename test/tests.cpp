@@ -85,6 +85,10 @@ int main(int argc, char *argv[])
     testCases.push_back(CU_add_test(testSuites.at(1), "Test Playing Card string_to_suit", test_PlayingCard_string_to_suit));
     testCases.push_back(CU_add_test(testSuites.at(1), "Test Playing Card int_to_value", test_PlayingCard_int_to_value));
     testCases.push_back(CU_add_test(testSuites.at(1), "Test Playing Card string_to_value", test_PlayingCard_string_to_value));
+    testCases.push_back(CU_add_test(testSuites.at(1), "Test Playing Card suit_to_int", test_PlayingCard_suit_to_int));
+    testCases.push_back(CU_add_test(testSuites.at(1), "Test Playing Card suit_to_string", test_PlayingCard_suit_to_string));
+    testCases.push_back(CU_add_test(testSuites.at(1), "Test Playing Card value_to_int", test_PlayingCard_value_to_int));
+    testCases.push_back(CU_add_test(testSuites.at(1), "Test Playing Card value_to_string", test_PlayingCard_value_to_string));
 
     // Run test based on settings
     /// @brief an enumeration of all of the available testing modes through CUNIT

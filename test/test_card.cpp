@@ -116,23 +116,23 @@ void test_Card_set_value()
 void test_Card_operator_eq()
 {
     // Create test object
-    std::string test_suit = "";
-    int test_value = 0;
+    std::string test_suit = "Hearts";
+    int test_value = 6;
     cardsim::objects::Card test_card = cardsim::objects::Card(test_suit, test_value);
 
     // Create equal object
-    std::string equal_suit = "";
-    int equal_value = 0;
+    std::string equal_suit = "Hearts";
+    int equal_value = 6;
     cardsim::objects::Card equal_card = cardsim::objects::Card(equal_suit, equal_value);
 
     // Create less than object
-    std::string less_than_suit = "";
-    int less_than_value = 0;
+    std::string less_than_suit = "Spades";
+    int less_than_value = 4;
     cardsim::objects::Card less_than_card = cardsim::objects::Card(less_than_suit, less_than_value);
 
     // Create greater than object
-    std::string greater_than_suit = "";
-    int greater_than_value = 0;
+    std::string greater_than_suit = "Diamonds";
+    int greater_than_value = 12;
     cardsim::objects::Card greater_than_card = cardsim::objects::Card(greater_than_suit, greater_than_value);
 
     // Test operators
@@ -144,25 +144,24 @@ void test_Card_operator_eq()
 
 void test_Card_operator_lt()
 {
-
     // Create test object
-    std::string test_suit = "";
-    int test_value = 0;
+    std::string test_suit = "Hearts";
+    int test_value = 6;
     cardsim::objects::Card test_card = cardsim::objects::Card(test_suit, test_value);
 
     // Create equal object
-    std::string equal_suit = "";
-    int equal_value = 0;
+    std::string equal_suit = "Hearts";
+    int equal_value = 6;
     cardsim::objects::Card equal_card = cardsim::objects::Card(equal_suit, equal_value);
 
     // Create less than object
-    std::string less_than_suit = "";
-    int less_than_value = 0;
+    std::string less_than_suit = "Spades";
+    int less_than_value = 4;
     cardsim::objects::Card less_than_card = cardsim::objects::Card(less_than_suit, less_than_value);
 
     // Create greater than object
-    std::string greater_than_suit = "";
-    int greater_than_value = 0;
+    std::string greater_than_suit = "Diamonds";
+    int greater_than_value = 12;
     cardsim::objects::Card greater_than_card = cardsim::objects::Card(greater_than_suit, greater_than_value);
 
     // Test operators
@@ -175,33 +174,32 @@ void test_Card_operator_lt()
 
 void test_Card_operator_gt()
 {
-
     // Create test object
-    std::string test_suit = "";
-    int test_value = 0;
+    std::string test_suit = "Hearts";
+    int test_value = 6;
     cardsim::objects::Card test_card = cardsim::objects::Card(test_suit, test_value);
 
     // Create equal object
-    std::string equal_suit = "";
-    int equal_value = 0;
+    std::string equal_suit = "Hearts";
+    int equal_value = 6;
     cardsim::objects::Card equal_card = cardsim::objects::Card(equal_suit, equal_value);
 
     // Create less than object
-    std::string less_than_suit = "";
-    int less_than_value = 0;
+    std::string less_than_suit = "Spades";
+    int less_than_value = 4;
     cardsim::objects::Card less_than_card = cardsim::objects::Card(less_than_suit, less_than_value);
 
     // Create greater than object
-    std::string greater_than_suit = "";
-    int greater_than_value = 0;
+    std::string greater_than_suit = "Diamonds";
+    int greater_than_value = 12;
     cardsim::objects::Card greater_than_card = cardsim::objects::Card(greater_than_suit, greater_than_value);
 
     // Test operators
-    CU_ASSERT_TRUE(less_than_card > test_card);
-    CU_ASSERT_TRUE(test_card > greater_than_card);
+    CU_ASSERT_TRUE(greater_than_card > test_card);
+    CU_ASSERT_TRUE(test_card > less_than_card);
 
-    CU_ASSERT_FALSE(test_card > less_than_card);
-    CU_ASSERT_FALSE(greater_than_card > test_card);
+    CU_ASSERT_FALSE(test_card > greater_than_card);
+    CU_ASSERT_FALSE(less_than_card > test_card);
 }
 
 void test_Card_operator_assign() {
