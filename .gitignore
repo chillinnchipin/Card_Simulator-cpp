@@ -1,3 +1,7 @@
 .cspell/custom-dictionary-workspace.txt
 .vs
 .vscode
+*.o
+cardsim
+tests
+CUnit*-Results.xml
