@@ -69,7 +69,7 @@ namespace cardsim
              * @param other the other card to change the card to
              * @return a copy reference to the card
              */
-            Card &operator=(Card other);
+            //Card &operator=(Card other);
 
             /**
              * @brief sets the value to the given integer

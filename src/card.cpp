@@ -17,7 +17,7 @@ namespace cardsim
 
         void Card::set_value(int value) { this->value = value; }
 
-        Card &Card::operator=(Card other) { return other; }
+        //Card &Card::operator=(Card other) { return other; }
 
         Card &Card::operator=(int other)
         {
@@ -45,9 +45,9 @@ namespace cardsim
 
         bool Card::operator==(Card other) { return (this->suit == other.get_suit() && this->value == other.get_value()); }
 
-        bool Card::operator<(Card other) { return (this->suit < other.get_suit() && this->value < other.get_value()); }
+        bool Card::operator<(Card other) { return (/*this->suit < other.get_suit() &&*/ this->value < other.get_value()); }
 
-        bool Card::operator>(Card other) { return (this->suit > other.get_suit() && this->value > other.get_value()); }
+        bool Card::operator>(Card other) { return (/*this->suit > other.get_suit() &&*/ this->value > other.get_value()); }
 
         PlayingCard::PlayingCard(Suit suit, Value value)
         {
@@ -59,6 +59,7 @@ namespace cardsim
             case Suit::Hearts:
             case Suit::Spades:
                 this->suit = suit;
+                break;
             default:
                 throw std::runtime_error("Invalid parameter suit");
             }
@@ -295,6 +296,8 @@ namespace cardsim
             case Value::King:
                 return 12;
                 break;
+            default:
+                throw std::runtime_error("Invalid playing card value");
             }
         }
 
@@ -341,6 +344,8 @@ namespace cardsim
             case Value::King:
                 return "King";
                 break;
+            default:
+                throw std::runtime_error("Invalid playing card value");
             }
         }
 
