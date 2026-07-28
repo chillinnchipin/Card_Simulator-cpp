@@ -1,7 +1,8 @@
-.cspell/custom-dictionary-workspace.txt
+.cspell
 .vs
 .vscode
 *.o
 cardsim
 tests
 CUnit*-Results.xml
+.argparse-built

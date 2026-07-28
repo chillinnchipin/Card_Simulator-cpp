@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <stdexcept>
 
-#include "../headers/card.hpp"
+#include "../src/include/card.hpp"
 
 int setup_Card_test_suite()
 {
