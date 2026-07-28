@@ -3,7 +3,7 @@
 #include <array>
 #include <stdexcept>
 
-#include "../headers/deck.hpp"
+#include "include/deck.hpp"
 
 namespace cardsim {
     namespace objects {

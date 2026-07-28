@@ -1,3 +1,3 @@
-[submodule "headers/argparse"]
-	path = headers/argparse
+[submodule "src/include/argparse"]
+	path = src/include/argparse
 	url = https://github.com/p-ranav/argparse

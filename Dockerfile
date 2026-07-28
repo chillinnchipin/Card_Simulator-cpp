@@ -14,7 +14,6 @@ RUN apt install libcunit1-dev -y
 # Copy Source files
 COPY makefile .
 COPY test/ test/
-COPY headers/ headers/
 COPY src/ src/
 COPY .git/ .git/
 

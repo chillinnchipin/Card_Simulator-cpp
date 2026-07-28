@@ -1,7 +1,7 @@
 #include <string>
 #include <stdexcept>
 
-#include "../headers/card.hpp"
+#include "include/card.hpp"
 
 namespace cardsim
 {
