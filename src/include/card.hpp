@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 using namespace std;
 
@@ -7,7 +8,7 @@ namespace cardsim
     {
         class Card
         {
-            private:
+        private:
             // Attributes
             /// @brief the suit of the card
             string suit;
@@ -15,7 +16,7 @@ namespace cardsim
             /// @brief the numerical value held by the card
             int value;
 
-            public:
+        public:
             // Constructors
 
             /**
@@ -25,7 +26,7 @@ namespace cardsim
 
             /**
              * @brief a constructor that initializes both the suit and value of the card
-             * 
+             *
              * @param suit the suit of the card
              * @param value the value of the card
              */
@@ -69,7 +70,7 @@ namespace cardsim
              * @param other the other card to change the card to
              * @return a copy reference to the card
              */
-            //Card &operator=(Card other);
+            // Card &operator=(Card other);
 
             /**
              * @brief sets the value to the given integer
@@ -139,9 +140,10 @@ namespace cardsim
                 Hearts,
                 Spades,
             };
-            
+
             /// @brief a classs limiting the Value attribute to: "Jack", "Queen", "King", "Ace", and 1-10
-            enum class Value {
+            enum class Value
+            {
                 One,
                 Two,
                 Three,
@@ -165,38 +167,37 @@ namespace cardsim
             Value value;
 
         public:
-
             /**
              * @brief a constructor that initialize the suit and value of the card
-             * 
+             *
              * @param suit the suit to set the card to, options are limited to: "Diamonds", "Clubs", "Hearts", "Spades"
              * @param value the value to set the card to, options are limited to: "Jack", "Queen", "King", "Ace", and 1-10
              */
             PlayingCard(Suit suit, Value value);
             /**
              * @brief returns the suit of the card
-             * 
+             *
              * @return the suit of the card
              */
             Suit get_suit();
 
             /**
              * @brief returns the value of the card
-             * 
+             *
              * @return the value of the card
              */
             Value get_value();
 
             /**
              * @brief sets the suit of the card to the given suit
-             * 
+             *
              * @param suit the new suit to set the card to
              */
             void set_suit(Suit suit);
 
             /**
              * @brief sets the value of the card to the given value
-             * 
+             *
              * @param value the new value to set the card to
              */
             void set_value(Value value);
@@ -209,7 +210,7 @@ namespace cardsim
 
             static Value string_to_value(string value);
 
-            static int suit_to_int(Suit suit); 
+            static int suit_to_int(Suit suit);
 
             static string suit_to_string(Suit suit);
 

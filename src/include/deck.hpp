@@ -1,3 +1,4 @@
+#pragma once
 #include <stdlib.h>
 #include <vector>
 #include <array>
@@ -50,28 +51,28 @@ namespace cardsim
 
             /**
              * @brief returns the size of the deck, i.e. number of cards in the deck
-             * 
+             *
              * @return the number of cards in the deck
              */
             size_t size();
 
             /**
              * @brief used to tell if the deck is empty or not
-             * 
+             *
              * @return true if there are not card in the deck, false if there is at least one card in the deck
              */
             bool empty();
 
             /**
-             * @brief 
-             * 
+             * @brief
+             *
              * @return an iterator for the first card in the deck
              */
             std::vector<Card>::iterator begin();
 
             /**
-             * @brief 
-             * 
+             * @brief
+             *
              * @return an iterator for the last card in the deck
              */
             std::vector<Card>::iterator end();
@@ -88,7 +89,7 @@ namespace cardsim
 
             /**
              * @brief returns the number of cards in the deck
-             * 
+             *
              * @return a vector holding all the cards in the deck
              */
             std::vector<Card> get_deck();
@@ -104,7 +105,7 @@ namespace cardsim
             /**
              * @brief returns the first card matching the given card
              *
-             * @param Card 
+             * @param Card
              * @return the first card matching to the card parameter
              */
             Card get_card(Card card);
@@ -121,7 +122,7 @@ namespace cardsim
             /**
              * @brief fills the array with all cards with that match the given card
              *
-             * @param deck the array to fill with all matching cards to 
+             * @param deck the array to fill with all matching cards to
              * @param size a pointer to a size variable which will be changed to the number of cards in the deck
              * @param match any card in the deck that is equal to this card will be added to the array
              * @return the number of cards in the array
@@ -152,7 +153,7 @@ namespace cardsim
              *
              * @param size an optional pointer to a size variable to will be changed to the number of cards in the vector
              * @param suit any card that is added to the vector will need to have the same suit
-             * @return a vector containing all the cards with the same suit and value 
+             * @return a vector containing all the cards with the same suit and value
              */
             std::vector<Card> get_cards(string suit, int value);
 

@@ -202,7 +202,8 @@ void test_Card_operator_gt()
     CU_ASSERT_FALSE(less_than_card > test_card);
 }
 
-void test_Card_operator_assign() {
+void test_Card_operator_assign()
+{
     // Create original card
     std::string original_suit = "Hearts";
     int original_value = 5;
@@ -221,7 +222,8 @@ void test_Card_operator_assign() {
     CU_ASSERT_NOT_EQUAL(original_card.get_value(), original_value);
 }
 
-void test_Card_operator_add() {
+void test_Card_operator_add()
+{
     // Create original card
     std::string original_suit = "Hearts";
     int original_value = 5;
@@ -256,9 +258,10 @@ int cleanup_PlayingCard_test_suite()
     return 0;
 }
 
-void test_PlayingCard_default_constructor() {
+void test_PlayingCard_default_constructor()
+{
     // TODO add default constructor
-    //CU_FAIL("TODO test: no default constructor exist to test");
+    // CU_FAIL("TODO test: no default constructor exist to test");
     /*
     // Create default object
     cardsim::objects::PlayingCard test_card = cardsim::objects::PlayingCard();
@@ -268,7 +271,8 @@ void test_PlayingCard_default_constructor() {
     CU_ASSERT_EQUAL(test_card.get_value(), cardsim::objects::PlayingCard::Value::One); // Assuming default value is One */
 }
 
-void test_PlayingCard_constructor() {
+void test_PlayingCard_constructor()
+{
     // Set test values
     cardsim::objects::PlayingCard::Suit suit = cardsim::objects::PlayingCard::Suit::Hearts;
     cardsim::objects::PlayingCard::Value value = cardsim::objects::PlayingCard::Value::Ace;
@@ -281,7 +285,8 @@ void test_PlayingCard_constructor() {
     CU_ASSERT_EQUAL(test_card.get_value(), value);
 }
 
-void test_PlayingCard_get_suit() {
+void test_PlayingCard_get_suit()
+{
     // Set testing values
     // TODO make a test fixture for this
     cardsim::objects::PlayingCard::Suit expected_suit = cardsim::objects::PlayingCard::Suit::Diamonds;
@@ -297,7 +302,8 @@ void test_PlayingCard_get_suit() {
     CU_ASSERT_EQUAL(actual_suit, expected_suit);
 }
 
-void test_PlayingCard_get_value() {
+void test_PlayingCard_get_value()
+{
     // Set testing values
     // TODO make a test fixture for this
     cardsim::objects::PlayingCard::Suit suit = cardsim::objects::PlayingCard::Suit::Diamonds;
@@ -313,7 +319,8 @@ void test_PlayingCard_get_value() {
     CU_ASSERT_EQUAL(actual_value, expected_value);
 }
 
-void test_PlayingCard_set_suit() {
+void test_PlayingCard_set_suit()
+{
     // Set testing values
     // TODO make a test fixture for this
     cardsim::objects::PlayingCard::Suit suit = cardsim::objects::PlayingCard::Suit::Diamonds;
@@ -332,7 +339,8 @@ void test_PlayingCard_set_suit() {
     CU_ASSERT_NOT_EQUAL(actual_suit, suit);
 }
 
-void test_PlayingCard_set_value() {
+void test_PlayingCard_set_value()
+{
     // Set testing values
     // TODO make a test fixture for this
     cardsim::objects::PlayingCard::Suit suit = cardsim::objects::PlayingCard::Suit::Diamonds;
@@ -351,7 +359,8 @@ void test_PlayingCard_set_value() {
     CU_ASSERT_NOT_EQUAL(actual_value, value);
 }
 
-void test_PlayingCard_int_to_suit() {
+void test_PlayingCard_int_to_suit()
+{
     // Assert Clubs
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::int_to_suit(0), cardsim::objects::PlayingCard::Suit::CLubs);
     // Assert Diamonds
@@ -362,7 +371,8 @@ void test_PlayingCard_int_to_suit() {
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::int_to_suit(3), cardsim::objects::PlayingCard::Suit::Spades);
 }
 
-void test_PlayingCard_string_to_suit() {
+void test_PlayingCard_string_to_suit()
+{
     // Assert Clubs
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::string_to_suit("Clubs"), cardsim::objects::PlayingCard::Suit::CLubs);
     // Assert Diamonds
@@ -373,7 +383,8 @@ void test_PlayingCard_string_to_suit() {
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::string_to_suit("Spades"), cardsim::objects::PlayingCard::Suit::Spades);
 }
 
-void test_PlayingCard_int_to_value() {
+void test_PlayingCard_int_to_value()
+{
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::int_to_value(0), cardsim::objects::PlayingCard::Value::Ace);
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::int_to_value(1), cardsim::objects::PlayingCard::Value::One);
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::int_to_value(2), cardsim::objects::PlayingCard::Value::Two);
@@ -389,7 +400,8 @@ void test_PlayingCard_int_to_value() {
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::int_to_value(12), cardsim::objects::PlayingCard::Value::King);
 }
 
-void test_PlayingCard_string_to_value() {
+void test_PlayingCard_string_to_value()
+{
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::string_to_value("Ace"), cardsim::objects::PlayingCard::Value::Ace);
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::string_to_value("One"), cardsim::objects::PlayingCard::Value::One);
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::string_to_value("Two"), cardsim::objects::PlayingCard::Value::Two);
@@ -405,7 +417,8 @@ void test_PlayingCard_string_to_value() {
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::string_to_value("King"), cardsim::objects::PlayingCard::Value::King);
 }
 
-void test_PlayingCard_suit_to_int() {
+void test_PlayingCard_suit_to_int()
+{
     // Assert Clubs
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::suit_to_int(cardsim::objects::PlayingCard::Suit::CLubs), 0);
     // Assert Diamonds
@@ -416,7 +429,8 @@ void test_PlayingCard_suit_to_int() {
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::suit_to_int(cardsim::objects::PlayingCard::Suit::Spades), 3);
 }
 
-void test_PlayingCard_suit_to_string() {
+void test_PlayingCard_suit_to_string()
+{
     // Assert Clubs
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::suit_to_string(cardsim::objects::PlayingCard::Suit::CLubs), "Clubs");
     // Assert Diamonds
@@ -427,7 +441,8 @@ void test_PlayingCard_suit_to_string() {
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::suit_to_string(cardsim::objects::PlayingCard::Suit::Spades), "Spades");
 }
 
-void test_PlayingCard_value_to_int() {
+void test_PlayingCard_value_to_int()
+{
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::value_to_int(cardsim::objects::PlayingCard::Value::Ace), 0);
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::value_to_int(cardsim::objects::PlayingCard::Value::One), 1);
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::value_to_int(cardsim::objects::PlayingCard::Value::Two), 2);
@@ -443,7 +458,8 @@ void test_PlayingCard_value_to_int() {
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::value_to_int(cardsim::objects::PlayingCard::Value::King), 12);
 }
 
-void test_PlayingCard_value_to_string() {
+void test_PlayingCard_value_to_string()
+{
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::value_to_string(cardsim::objects::PlayingCard::Value::Ace), "Ace");
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::value_to_string(cardsim::objects::PlayingCard::Value::One), "One");
     CU_ASSERT_EQUAL(cardsim::objects::PlayingCard::value_to_string(cardsim::objects::PlayingCard::Value::Two), "Two");
