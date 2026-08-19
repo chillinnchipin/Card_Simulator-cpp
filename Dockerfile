@@ -19,6 +19,7 @@ COPY .git/ .git/
 
 # Build
 RUN cd /usr/cardsim 
+RUN git clone https://github.com/p-ranav/argparse src/include/argparse
 RUN make all
 
 # Run test

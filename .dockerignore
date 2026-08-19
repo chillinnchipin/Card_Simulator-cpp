@@ -1,1 +1,12 @@
-src/include/argparse/build
+.cspell
+.vs
+.vscode
+*.o
+cardsim
+tests
+CUnit*-Results.xml
+.argparse-built
+.dockerignore
+.github
+.prettierrc
+src/include/argparse
